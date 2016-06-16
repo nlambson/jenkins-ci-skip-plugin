@@ -1,15 +1,15 @@
-# Jenkins ci skip plugin
+# Jenkins wip skip plugin
 
 [![Build Status](https://travis-ci.org/banyan/jenkins-ci-skip-plugin.png)](https://travis-ci.org/banyan/jenkins-ci-skip-plugin)
 [![Coverage Status](https://coveralls.io/repos/banyan/jenkins-ci-skip-plugin/badge.png)](https://coveralls.io/r/banyan/jenkins-ci-skip-plugin)
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/banyan/jenkins-ci-skip-plugin/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
-Skip making a build for certain push. Just add `[ci skip]` into your commit's message to let Jenkins know, that you do not want to perform build for the next push.
+Skip making a build for certain push. Just add `WIP` into your commit's message to let Jenkins know, that you do not want to perform build for the next push.
 
 Full example:
 
 ```
-$ git commit -m 'documentation update [ci skip]'
+$ git commit -m 'documentation update WIP'
 ```
 
 It is very useful when you are working things unrelated to application's code such as README. This feature idea comes from [Travis CI](http://about.travis-ci.org/docs/user/how-to-skip-a-build/).
@@ -18,15 +18,15 @@ It is very useful when you are working things unrelated to application's code su
 
 Install the plugin from the Jenkins Plugin Manager.
 
-### Enabling ci-skip
+### Enabling WIP-skip
 
-In the job configuration, check Enable ci-skip.
+In the job configuration, check Enable WIP-skip.
 
 ![A Screenshot](docs/enable.png)
 
 ### How it works
 
-Jenkins is based on works by changeset, so if there is changeset from before build and commit includes `[ci skip]`, then build is skipped as `NOT_BUILT`.
+Jenkins is based on works by changeset, so if there is changeset from before build and commit includes `WIP`, then build is skipped as `NOT_BUILT`.
 If there is no changeset, it will be build.
 
 ## Development

@@ -12,8 +12,8 @@ end
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require 'ci_skip/matcher'
-require 'models/ci_skip_wrapper'
+require 'wip_skip/matcher'
+require 'models/wip_skip_wrapper'
 
 RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
